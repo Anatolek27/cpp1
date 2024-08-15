@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: akunegel <akunegel@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/08/05 12:22:49 by akunegel          #+#    #+#              #
+#    Updated: 2024/08/05 12:23:43 by akunegel         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME	= Zombie
 
 CC		= c++
@@ -17,7 +29,7 @@ all: $(NAME)
 
 $(NAME):
 	@printf "$(CURSIVE)$(GRAY) 	- Compiling $(NAME)... $(RESET)\n"
-	@ $(CC) $(FLAGS) main.cpp Zombie.cpp newZombie.cpp randomChump.cpp -o $(NAME)
+	@ $(CC) $(FLAGS) Main.cpp Zombie.cpp NewZombie.cpp RandomChump.cpp -o $(NAME)
 	@printf "$(GREEN)    - Executable ready.\n$(RESET)"
 
 clean:

@@ -1,19 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akunegel <akunegel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/05 12:22:53 by akunegel          #+#    #+#             */
-/*   Updated: 2024/08/05 12:22:53 by akunegel         ###   ########.fr       */
+/*   Created: 2024/08/05 12:24:40 by akunegel          #+#    #+#             */
+/*   Updated: 2024/08/05 12:57:28 by akunegel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
 
-Zombie *newZombie(std::string name)
-{
-	Zombie *zombie = new Zombie(name);
-	return (zombie);
-}
+# include <iostream>
+
+class Weapon {
+    private:
+        std::string type;
+    public:
+        Weapon(std::string newType);
+        Weapon();
+        ~Weapon();
+        const std::string getType();
+        void setType(std::string newType);
+
+};
+
+#endif

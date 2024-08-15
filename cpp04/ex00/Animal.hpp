@@ -1,19 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akunegel <akunegel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/05 12:22:53 by akunegel          #+#    #+#             */
-/*   Updated: 2024/08/05 12:22:53 by akunegel         ###   ########.fr       */
+/*   Created: 2024/08/05 23:20:27 by akunegel          #+#    #+#             */
+/*   Updated: 2024/08/07 14:35:19 by akunegel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
-Zombie *newZombie(std::string name)
-{
-	Zombie *zombie = new Zombie(name);
-	return (zombie);
-}
+# include <iostream>
+
+class Animal {
+    protected:
+        std::string type;
+    public:
+        Animal();
+        Animal(Animal& a);
+        Animal& operator=(Animal& other);
+        ~Animal();
+        const std::string getType(void);
+        void makeSound();
+};
+
+#endif

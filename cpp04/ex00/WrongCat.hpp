@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akunegel <akunegel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/05 12:22:53 by akunegel          #+#    #+#             */
-/*   Updated: 2024/08/05 12:22:53 by akunegel         ###   ########.fr       */
+/*   Created: 2024/08/05 23:23:37 by akunegel          #+#    #+#             */
+/*   Updated: 2024/08/07 14:31:22 by akunegel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-Zombie *newZombie(std::string name)
-{
-	Zombie *zombie = new Zombie(name);
-	return (zombie);
-}
+#include "Animal.hpp"
+
+class WrongCat : public Animal {
+    private:
+        std::string type;
+    public:
+        WrongCat();
+        WrongCat(WrongCat &d);
+        WrongCat& operator=(WrongCat& other);
+        ~WrongCat();
+        void getType(void);
+};
+
+#endif

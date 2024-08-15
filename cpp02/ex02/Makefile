@@ -6,11 +6,11 @@
 #    By: akunegel <akunegel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/05 11:42:32 by akunegel          #+#    #+#              #
-#    Updated: 2024/08/05 12:24:23 by akunegel         ###   ########.fr        #
+#    Updated: 2024/08/05 16:55:46 by akunegel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= PhoneBook
+NAME	= Float
 	
 CC		= c++
 FLAGS	= -Wall -Wextra -Werror -std=c++98
@@ -29,7 +29,7 @@ all: $(NAME)
 
 $(NAME): 
 	@printf "$(CURSIVE)$(GRAY) 	- Compiling $(NAME)... $(RESET)\n"
-	@ $(CC) $(FLAGS) Main.cpp Phonebook.cpp -o $(NAME)
+	@ $(CC) $(FLAGS) main.cpp Fixed.cpp -o $(NAME)
 	@printf "$(GREEN)    - Executable ready.\n$(RESET)"
 
 clean:

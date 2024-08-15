@@ -1,19 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akunegel <akunegel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/05 12:22:53 by akunegel          #+#    #+#             */
-/*   Updated: 2024/08/05 12:22:53 by akunegel         ###   ########.fr       */
+/*   Created: 2024/08/05 23:23:37 by akunegel          #+#    #+#             */
+/*   Updated: 2024/08/07 14:30:57 by akunegel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef CAT_HPP
+# define CAT_HPP
 
-Zombie *newZombie(std::string name)
-{
-	Zombie *zombie = new Zombie(name);
-	return (zombie);
-}
+#include "Animal.hpp"
+
+class Cat : public Animal {
+    private:
+        std::string _type;
+    public:
+        Cat();
+        Cat(Cat &d);
+        Cat& operator=(Cat& other);
+        ~Cat();
+        void makeNoise();
+        std::string getType();
+};
+
+#endif

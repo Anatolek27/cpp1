@@ -1,0 +1,9 @@
+Create a program that take               three parameter               in the following order: a filename and
+two               tring              ,               1 and               2.
+It will open the file <filename> and copie               it               content into a new file
+<filename>.replace, replacing every occurrence of               1 with               2.
+U              ing C file manipulation function               i               forbidden and will be con              idered cheating. All
+the member function               of the cla                                           td::              tring are allowed, except replace. U              e them
+wi              ely!
+Of cour              e, handle unexpected input               and error              . You have to create and turn in your
+own te              t               to en              ure your program work               a               expected.
