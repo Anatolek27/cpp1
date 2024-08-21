@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akunegel <akunegel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 11:48:06 by akunegel          #+#    #+#             */
-/*   Updated: 2024/08/05 11:48:07 by akunegel         ###   ########.fr       */
+/*   Updated: 2024/08/20 16:44:40 by akunegel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_H
-#define PHONEBOOK_H
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
+# pragma once
 
-#include <string>
-#include <iostream>
-#include <cstdlib>
-#include <iomanip>
+# include <string>
+# include <iostream>
+# include <istream>
+# include <cstdlib>
+# include <iomanip>
+# include "Contact.hpp"
 
-class Contact {
-    public:
-    std::string firstname;
-    std::string lastname;
-    std::string nickname;
-    std::string phone;
-    std::string secret;
-};
-
+class Contact;
 class PhoneBook{
+    private:
+        Contact _contacts[8];
+        int _number;
+        int _max;
     public:
-        Contact contacts[8];
-        int number;
-        int max;
-    PhoneBook();
-    void addContact();
+        PhoneBook();
+        int getMax();
+        int getNumber();
+        Contact *getContact();
+        void addContact();
 };
 
 #endif

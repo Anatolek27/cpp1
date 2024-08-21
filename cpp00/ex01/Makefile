@@ -6,7 +6,7 @@
 #    By: akunegel <akunegel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/05 11:42:32 by akunegel          #+#    #+#              #
-#    Updated: 2024/08/05 12:24:23 by akunegel         ###   ########.fr        #
+#    Updated: 2024/08/20 14:34:12 by akunegel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ all: $(NAME)
 
 $(NAME): 
 	@printf "$(CURSIVE)$(GRAY) 	- Compiling $(NAME)... $(RESET)\n"
-	@ $(CC) $(FLAGS) Main.cpp Phonebook.cpp -o $(NAME)
+	@ $(CC) $(FLAGS) Main.cpp Phonebook.cpp Contact.cpp -o $(NAME)
 	@printf "$(GREEN)    - Executable ready.\n$(RESET)"
 
 clean:
